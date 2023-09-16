@@ -1,0 +1,50 @@
+/*Imágenes*/
+
+@media only screen and (max-width: 320px){
+    .tamanio{
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px){
+    .tamanio{
+        width: 45%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 640px){
+    .tamanio{
+        width: 55%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 768px){
+    .tamanio{
+        width: 65%;
+        margin: 0 auto;
+        display: block;
+    }  
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    .tamanio{
+        width: 75%;
+        margin: 0 auto;
+        display: block;
+    } 
+}
+
+@media only screen and (min-width: 1025px){
+    .tamanio{
+        width: 85%;
+        margin: 0 auto;
+        display: block;
+    }
+    
+}

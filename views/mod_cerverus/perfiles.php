@@ -1,0 +1,132 @@
+<main class="content-wrapper">
+    <div class="modal fade" id="RegistroGuardado" tabindex="-1" aria-labelledby="LabelRegistroGuardado" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h4 class="modal-title" id="LabelRegistroGuardado">
+                        <i class="fas fa-check-square"></i>
+                    </h4>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center" id="mensajeExito">
+
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ErrorRegistro" tabindex="-1" aria-labelledby="LabelErrorRegistro" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h4 class="modal-title" id="LabeErrorRegistro">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </h4>
+                    <button type="submit" class="close text-white" data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center" id="mensajeError">
+
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <article class="container-fluid">
+        <section class="row my-2 justify-content-center" id="principal">
+            <div class="col-lg-11">
+                <h1 class="text-center my-3">Perfiles</h1>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="thead-dark">
+                            <tr class="text-center">
+                                <th colspan="3">
+                                    <a href="" id="Add" class="btn btn-success" data-toggle="modal" data-target="#modalPerfiles">Nuevo</a>
+                                </th>
+                            </tr>
+                            <tr class="text-center">
+                                <th>Perfiles</th>
+                                <th>Activo</th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-perfiles">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </article>
+    <div class="modal fade" id="modalPerfiles" tabindex="-1" aria-labelledby="LabelModalPerfil" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" id="modal-header">
+                    <h5 class="modal-title" id="LabelModalPerfil"></h5>
+                    <button class="close" id="close" data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="frmPerfil" method="POST">
+                        <div class="my-3">
+                            <input type="hidden" name="int_id_perfiles" id="IDPerfiles" class="form-control">
+                        </div>
+                        <div class="my-3">
+                            <label for="">Nombre del Perfil: </label>
+                            <input type="text" name="var_perfiles" id="NombrePerfil" class="form-control">
+                        </div>
+                        <div class="my-3">
+                            <input type="hidden" name="task" id="task" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" name="btnGrabar" id="btnGrabar" data-dismiss="modal">Agregar</button>
+                    <button type="submit" class="btn btn-warning" name="btnModificar" id="btnModificar" data-dismiss="modal">Modificar</button>
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="eliminarPer" tabindex="-1" aria-labelledby="idAdvertenciaPer" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="idAdvertenciaDep">Advertencia</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="frmEditPerfil">
+                        <div class="my-3">
+                            <input type="hidden" name="int_id_perfiles" id="IDPer">
+                        </div>
+                        <div class="my-3">
+                            <input type="hidden" name="task" id="Accion" value="desactivar-perfil">
+                        </div>
+                        <p class="text-center mt-1">
+                            ¿Está seguro que desea eliminar este registro?
+                        </p>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnSi" data-dismiss="modal">Si</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
